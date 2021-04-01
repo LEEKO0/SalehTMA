@@ -7,14 +7,26 @@ import java.util.*;
 public class Registration {
     static Scanner input = new Scanner(System.in);
 
+    static Set<Section> sections = new HashSet<Section>();
+
     public static void main(String[] arrge) {
-        Set<Section> sections = new HashSet<Section>();
         System.out.println("Welcome in Registraion department program.\n\n");
-        // addFakedate(sections, 1);
-        // addFakedate(sections, 5);
-        // addFakedate(sections, 0);
-        // addFakedate(sections, 2);
+        Section s = new Section("MT130", 8, "1301", "jedda", true, new Instrctor());
+        Section s1 = new Section("MT130", 8, "1302", "jedda", true, new Instrctor());
+        Section s2 = new Section("MT130", 8, "1307", "jedda", true, new Instrctor());
+        Section s3 = new Section("MT130", 8, "1304", "jedda", true, new Instrctor());
+        Section.addSection(sections, s);
+        Section.addSection(sections, s1);
+        Section.addSection(sections, s2);
+        Section.addSection(sections, s3);
+        Student student = new Student();
+        Student.addNewStudent(s, student);
+        Student.addNewStudent(s, student);
+
+        Course.displayCourses(sections);
+
         operatorsSelections(sections);
+
     }
 
     public static void operatorsSelections(Set<Section> sections) {
@@ -22,7 +34,6 @@ public class Registration {
         System.out.println("Selece one of Operations: \n");
         System.out.println((++count) + "- Add new Section. ");
         System.out.println((++count) + "- Add new Student in specified section: ");
-        // System.out.println((++count) + "- Add new Instrctor in specified section: ");
         System.out.println((++count) + "- Remove Student in specified section: ");
         System.out
                 .println((++count) + "- Retrieving the average number of students per section of a specified course: ");
@@ -37,21 +48,27 @@ public class Registration {
             switch (selcet) {
             case 1:
                 Section.createNewSection(sections);
+                continueOrNot(sections);
                 break;
             case 2:
                 Student.addNewStudent(sections);
+                continueOrNot(sections);
                 break;
             case 3:
                 Student.removeStudent(sections);
+                continueOrNot(sections);
                 break;
             case 4:
                 Section.averageOfStudent(sections);
+                continueOrNot(sections);
                 break;
             case 5:
-                Course.displayingCoruse(sections);
+                Course.displayCourses(sections);
+                continueOrNot(sections);
                 break;
             case 6:
                 savingAllData(sections);
+                continueOrNot(sections);
                 break;
             case 7:
                 toS(sections);
@@ -66,7 +83,7 @@ public class Registration {
 
     public static void savingAllData(Set<Section> sections) {
         try {
-            File file = new File("src\\main\\java\\TMA\\regsistation.txt");
+            File file = new File("src/main/java/MT251/TMA/regsistation.txt");
             PrintWriter writer = new PrintWriter(file);
             TreeSet<Section> orderSections = new TreeSet<>(sections);
             for (Section section : orderSections)
@@ -98,27 +115,6 @@ public class Registration {
 
         else
             System.out.println("\n---- Thank you  ----\n");
-    }
-
-    public static void addFakedate(Set<Section> sections, int number) {
-
-        System.out.println("dd");
-        for (int i = 0; i < 3; i++) {
-            Section section = new Section();
-            section.setSectionNumber("Sec" + i);
-            section.setBranch("jeddah");
-            section.setCourseCode("mt" + number);
-            for (int j = 0; j < 5; j++) {
-                Student student = new Student();
-                student.setFullName("student" + j + "" + i);
-                student.setProgram("program" + number);
-                student.insertCourse("mt" + number, "Sec" + i);
-                section.addNewStudent(student);
-            }
-            sections.add(section);
-            System.out.println("d");
-
-        }
     }
 
 }

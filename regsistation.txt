@@ -1,0 +1,218 @@
+
+=================================
+Coure Code: mt0	Credit Hours: 0		Is Every Week: false
+Section Number: Sec0
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I16330		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S13453 	 Name: student20 	 Program: program0
+2-  id: S16330 	 Name: student00 	 Program: program0
+3-  id: S21078 	 Name: student40 	 Program: program0
+
+=================================
+
+
+=================================
+Coure Code: mt0	Credit Hours: 0		Is Every Week: false
+Section Number: Sec1
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I19206		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S11581 	 Name: student41 	 Program: program0
+2-  id: S19206 	 Name: student01 	 Program: program0
+3-  id: S26832 	 Name: student11 	 Program: program0
+4-  id: S23955 	 Name: student31 	 Program: program0
+
+=================================
+
+
+=================================
+Coure Code: mt0	Credit Hours: 0		Is Every Week: false
+Section Number: Sec2
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I29708		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S22083 	 Name: student12 	 Program: program0
+2-  id: S29708 	 Name: student02 	 Program: program0
+3-  id: S24228 	 Name: student22 	 Program: program0
+4-  id: S11854 	 Name: student42 	 Program: program0
+
+=================================
+
+
+=================================
+Coure Code: mt1	Credit Hours: 0		Is Every Week: false
+Section Number: Sec0
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I10440		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S12585 	 Name: student40 	 Program: program1
+2-  id: S20211 	 Name: student20 	 Program: program1
+3-  id: S18065 	 Name: student00 	 Program: program1
+4-  id: S27836 	 Name: student30 	 Program: program1
+
+=================================
+
+
+=================================
+Coure Code: mt1	Credit Hours: 0		Is Every Week: false
+Section Number: Sec1
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I10713		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S18338 	 Name: student31 	 Program: program1
+2-  id: S10713 	 Name: student01 	 Program: program1
+
+=================================
+
+
+=================================
+Coure Code: mt1	Credit Hours: 0		Is Every Week: false
+Section Number: Sec2
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I15462		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S23087 	 Name: student32 	 Program: program1
+2-  id: S15462 	 Name: student02 	 Program: program1
+
+=================================
+
+
+=================================
+Coure Code: mt2	Credit Hours: 0		Is Every Week: false
+Section Number: Sec0
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I16603		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S14730 	 Name: student10 	 Program: program2
+2-  id: S22356 	 Name: student40 	 Program: program2
+3-  id: S16603 	 Name: student00 	 Program: program2
+
+=================================
+
+
+=================================
+Coure Code: mt2	Credit Hours: 0		Is Every Week: false
+Section Number: Sec1
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I22356		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S19479 	 Name: student21 	 Program: program2
+2-  id: S22356 	 Name: student01 	 Program: program2
+
+=================================
+
+
+=================================
+Coure Code: mt2	Credit Hours: 0		Is Every Week: false
+Section Number: Sec2
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I27105		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S27105 	 Name: student02 	 Program: program2
+2-  id: S25233 	 Name: student22 	 Program: program2
+3-  id: S12858 	 Name: student42 	 Program: program2
+
+=================================
+
+
+=================================
+Coure Code: mt5	Credit Hours: 0		Is Every Week: false
+Section Number: Sec0
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I21215		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S28841 	 Name: student20 	 Program: program5
+2-  id: S11717 	 Name: student40 	 Program: program5
+3-  id: S21215 	 Name: student00 	 Program: program5
+4-  id: S13589 	 Name: student30 	 Program: program5
+
+=================================
+
+
+=================================
+Coure Code: mt5	Credit Hours: 0		Is Every Week: false
+Section Number: Sec1
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I19343		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S16466 	 Name: student11 	 Program: program5
+2-  id: S18202 	 Name: student41 	 Program: program5
+3-  id: S19343 	 Name: student01 	 Program: program5
+4-  id: S24092 	 Name: student31 	 Program: program5
+
+=================================
+
+
+=================================
+Coure Code: mt5	Credit Hours: 0		Is Every Week: false
+Section Number: Sec2
+Branch: jeddah
+-----------------------------
+Instrctor: 
+Id: I25827		Full Name: null	Age: 0		Gender: Female
+Biography: null
+-----------------------------
+List of Students: 
+
+1-  id: S10576 	 Name: student22 	 Program: program5
+2-  id: S25827 	 Name: student02 	 Program: program5
+3-  id: S28704 	 Name: student32 	 Program: program5
+
+=================================
+

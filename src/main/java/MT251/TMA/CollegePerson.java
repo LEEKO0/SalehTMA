@@ -8,16 +8,21 @@ import java.util.*;
 public abstract class CollegePerson extends Object {
     private String id;
     private String fullName;
-    private Date birthday;
     private int age;
     private boolean isMale;
 
     public CollegePerson() {
-        this(null, null, false);
+        this(null, false, 18);
     }
 
-    public CollegePerson(String fullName, Date birthday, boolean isMale) {
-
+    public CollegePerson(String fullName, boolean isMale, int age) {
+        this.setFullName(fullName);
+        this.setAge(age);
+        this.isMale = isMale;
+        if (this instanceof Instrctor)
+            this.id = "INST" + gen();
+        if (this instanceof Student)
+            this.id = "STUD" + gen();
     }
 
     /**
@@ -40,25 +45,10 @@ public abstract class CollegePerson extends Object {
         this.fullName = fullName;
     }
 
-    // public Date getBirthday() {
-    // return this.birthday;
-    // }
-
-    // public void setBirthday(Date birthday) {
-    // this.birthday = birthday;
-    // }
-
     public boolean getIsMale() {
         return this.isMale;
     }
 
-    public void setIsMale(boolean isMale) {
-        this.isMale = isMale;
-    }
-
-    /**
-     * calculate age
-     */
     public int getAge() {
         return age;
     }
@@ -67,7 +57,18 @@ public abstract class CollegePerson extends Object {
         this.age = age;
     }
 
-    // generat random numbers for id
+    public void setIsMale(boolean isMale) {
+        this.isMale = isMale;
+    }
+
+    /**
+     * this method generate a random id for every College Person, when we create a
+     * new College Person we will generate a random id for College Person, if it was
+     * Instructor we will add INST before his number, and if it was Student we will
+     * put STUD before his number
+     * 
+     * @param id
+     */
     public static int gen() {
         Random r = new Random(System.currentTimeMillis());
         return 10000 + r.nextInt(20000);

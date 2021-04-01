@@ -3,46 +3,28 @@ package MT251.TMA;
 import java.util.*;
 
 public class Instrctor extends CollegePerson {
-    // private ArrayList<String> teaching = new ArrayList<>();
-    // private ArrayList<String> experience = new ArrayList<>();
+
     private String biography;
 
     public Instrctor() {
-        this(null, null, false, null, null, null);
+        this(null, false, 25, null);
     }
 
-    public Instrctor(String fullName, Date birthday, boolean isMale, ArrayList<String> teaching,
-            ArrayList<String> experience, String biograhpy) {
-        super(fullName, birthday, isMale);
-        super.setId("I" + super.gen());
+    public Instrctor(String fullName, boolean isMale, int age, String biograhpy) {
+        super(fullName, isMale, age);
     }
 
-    // public String getTeaching() {
-    // String teaching = "";
-    // for (String s : this.teaching)
-    // teaching += s + "\n";
-    // return teaching;
-    // }
-
-    // public void addNewTeaching(String teaching) {
-    // this.teaching.add(teaching);
-    // }
-
-    // public String getExperience() {
-    // String experience = "";
-    // for (String s : this.experience)
-    // experience += s + "\n";
-    // return experience;
-    // }
-
-    // public void addNewExperience(String experience) {
-    // this.experience.add(experience);
-    // }
-
+    /**
+     * this method return value of biography
+     */
     public String getBiography() {
         return this.biography;
     }
 
+    /**
+     * 
+     * @param biography
+     */
     public void setBiography(String biography) {
         this.biography = biography;
     }
@@ -50,8 +32,7 @@ public class Instrctor extends CollegePerson {
     @Override
     public String toString() {
         return super.toString() + "Biography: " + this.getBiography();
-        // + "\nTeaching: " + this.getTeaching()
-        // + "\nExperience: " + this.getExperience();
+
     }
 
     @Override
@@ -60,12 +41,19 @@ public class Instrctor extends CollegePerson {
             if (super.equals(o)) {
                 Instrctor instrctor = (Instrctor) o;
                 return this.getBiography().equals(instrctor.getBiography());
-                // && this.getExperience().equals(instrctor.getExperience())
-                // && this.getTeaching().equals(instrctor.getTeaching());
+
             }
         return false;
     }
 
+    /**
+     * This method will add a new instructor in the specific section, after the
+     * calling method we will take the section as an argument then, we create a new
+     * Instructor obj and ask the user to enter the whole data for the Instructor,
+     * finally we add and update the Instructor of section.
+     * 
+     * @param section
+     */
     public static void addNewIntrecotr(Section section) {
         Instrctor instrctor = new Instrctor();
 

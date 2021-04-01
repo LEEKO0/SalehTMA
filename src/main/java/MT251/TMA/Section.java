@@ -12,6 +12,17 @@ public class Section extends Course implements Comparable<Section> {
     private boolean isEveryWeek;
 
     public Section() {
+
+    }
+
+    public Section(String courseCode, int creditHours, String sectionNumber, String branch, boolean isEveryWeek,
+            Instrctor instrctor) {
+        super.setCourseCode(courseCode);
+        super.setCreditHours(creditHours);
+        this.setSectionNumber(sectionNumber);
+        this.setBranch(branch);
+        this.SetIsEveryWeek(isEveryWeek);
+
     }
 
     public String getSectionNumber() {
@@ -42,7 +53,16 @@ public class Section extends Course implements Comparable<Section> {
         this.branch = branch;
     }
 
-    public String getStudents() {
+    public Map<String, Student> getStudents() {
+        return this.students;
+    }
+
+    /**
+     * will display all students on formate id - name - progame
+     * 
+     * @return
+     */
+    public String displayStudents() {
         String studentList = "";
         int counter = 0;
         for (String key : students.keySet()) {
@@ -52,19 +72,38 @@ public class Section extends Course implements Comparable<Section> {
         return studentList;
     }
 
+    /**
+     * this method will looking for a certain student by name and program
+     */
     public Student getStudent(String name, String program) {
+        Student student = new Student(name, program);
         for (String key : students.keySet()) {
-            if (students.get(key).getFullName().equals(name))
-                if (students.get(key).getProgram().equals(program))
-                    return students.get(key);
+            if (students.get(key).equals(student))
+                return students.get(key);
         }
         return null;
     }
 
-    public double getStudentNumber() {
-        return this.students.size();
+    /**
+     * on this method will ask user to enter data of section then return section
+     */
+    public static Section fillSectionData(Section section) {
+        System.out.print("Branch: ");
+        section.setBranch(Registration.input.next());
+        System.out.print("Credit hours: ");
+        section.setCreditHours(Registration.input.nextInt());
+        System.out.print("Is Every Week?  ");
+        section.SetIsEveryWeek(Registration.input.nextBoolean());
+        return section;
     }
 
+    /**
+     * createNewSection(), first of all, will ask user to enter courseCode and
+     * sectionNumber, then check if sections empty or not, if empty will call
+     * fillSectionData() to fill section data and added to set, else will check if
+     * section aleady exist and if exist it print error message, if not will ask to
+     * fill all data of section and ask to fill instructro info
+     */
     public static void createNewSection(Set<Section> sections) {
         Section newSection = new Section();
         System.out.println("Please fill this information: 1:Course code. 2:Section Number. 3:Branch. ");
@@ -74,44 +113,34 @@ public class Section extends Course implements Comparable<Section> {
         newSection.setSectionNumber(Registration.input.next());
 
         if (sections.size() == 0) {
-            System.out.print("Branch: ");
-            newSection.setBranch(Registration.input.next());
-            System.out.print("Credit hours: ");
-            newSection.setCreditHours(Registration.input.nextInt());
-            System.out.print("Is Every Week?  ");
-            newSection.SetIsEveryWeek(Registration.input.nextBoolean());
-
+            Section.fillSectionData(newSection);
             sections.add(newSection);
             System.out.println("\n---- Add new section ---- \n");
             Instrctor.addNewIntrecotr(newSection);
         } else {
             int counter = 0;
             for (Section section : sections) {
-                if (section.getCourseCode().equals(newSection.getCourseCode())) {
-                    if (section.getSectionNumber().equals(newSection.getSectionNumber())) {
-                        counter = -1;
-                        break;
-                    }
+                if (section.equals(newSection)) {
+                    counter = -1;
+                    break;
                 }
             }
             if (counter == 0) {
-
-                System.out.print("Branch: ");
-                newSection.setBranch(Registration.input.next());
-                System.out.print("Credit hours: ");
-                newSection.setCreditHours(Registration.input.nextInt());
-                System.out.print("Is Every Week?  ");
-                newSection.SetIsEveryWeek(Registration.input.nextBoolean());
-
+                Section.fillSectionData(newSection);
                 Instrctor.addNewIntrecotr(newSection);
                 sections.add(newSection);
             } else {
                 System.out.println("---- This section aleardy added ----");
             }
         }
-        Registration.continueOrNot(sections);
     }
 
+    /**
+     * first of all check if student already exist or not, if exist will print error
+     * message, else will check about size of student on section
+     * 
+     * @param student
+     */
     public void addNewStudent(Student student) {
         if (this.students.containsKey(student.getId())) {
             System.out.println("\n---- The student is aleady added ----\n");
@@ -122,8 +151,11 @@ public class Section extends Course implements Comparable<Section> {
             System.out.println("\n----This section is filled----\n");
     }
 
+    /**
+     * remvoing student form section, first of all, check if student exist or not,
+     * if not found print error message, else remove student
+     */
     public void removeStudent(Student student) {
-        // System.out.println(student);
         if (this.students.containsKey(student.getId())) {
             System.out.println("\n---- the student with id " + student.getId() + " is removed.----\n");
             this.students.remove(student.getId());
@@ -139,12 +171,50 @@ public class Section extends Course implements Comparable<Section> {
         this.instrctor = instrctor;
     }
 
+    /**
+     * on this method will calculate avarage of student per course, firs of all will
+     * check about size of section set, if equal zero print error message, else will
+     * check about section and total of student on this course, if total of student
+     * or number of section equal zero print error message, eles print avarage of
+     * student.
+     * 
+     */
+
+    public static void averageOfStudent(Set<Section> sections, String courseCode) {
+        if (sections.size() == 0) {
+            System.out.println("\n---- The no any section yet, Please add new Section than add Student ----\n");
+        } else {
+
+            double totalStudent = 0.0;
+            double numberSections = 0.0;
+            for (Section section : sections) {
+                if (section.getCourseCode().equals(courseCode)) {
+                    totalStudent += section.getStudents().size();
+                    numberSections++;
+                }
+            }
+            if (totalStudent == 0.0 || numberSections == 0.0) {
+                System.out.println("\n---- We don't found any students in " + courseCode + " ----\n");
+            } else {
+                double studentAvarge = 0.0;
+                System.out.println(
+                        "\n---- The avarge of student in  course" + courseCode + ",  is " + studentAvarge + " ----\n");
+            }
+
+        }
+    }
+
+    /**
+     * on this method will calculate avarage of student per course firs of all will
+     * check about size of section set, if equal zero print error message, else take
+     * course code and call averageOfStudent() with two arragemnt.
+     * 
+     */
     public static void averageOfStudent(Set<Section> sections) {
         if (sections.size() == 0) {
             System.out.println("\n---- The no any section yet, Please add new Section than add Student ----\n");
-            Registration.continueOrNot(sections);
-        } else {
 
+        } else {
             System.out.println("\n**************************");
             System.out.println("Section Information: ");
             System.out.println("**************************\n");
@@ -153,50 +223,44 @@ public class Section extends Course implements Comparable<Section> {
             String courseCode = Registration.input.nextLine();
 
             courseCode = Registration.input.nextLine();
-            double totalStudent = 0.0;
-
-            for (Section section : sections) {
-                if (section.getCourseCode().equals(courseCode)) {
-                    totalStudent += section.getStudentNumber();
-                }
-            }
-            if (totalStudent == 0.0) {
-                System.out.println("\n---- We don't found any students in " + courseCode + " ----\n");
-                Registration.continueOrNot(sections);
-            }
-            System.out.print("Enter Section Number:");
-            String sectionNumber = "";
-            sectionNumber = Registration.input.nextLine();
-            double studentAvarge = 0.0;
-
-            for (Section section : sections) {
-                if (section.getSectionNumber().equals(sectionNumber)) {
-                    studentAvarge = totalStudent / section.getStudentNumber();
-                    break;
-                }
-            }
-
-            if (studentAvarge == 0.0)
-                System.out.println("\n---- Section not found, Please add new section with this number " + sectionNumber
-                        + " to " + courseCode + " course " + "----\n");
-            else
-                System.out.println("\n---- The avarge of student in sectionNumber " + sectionNumber + " to "
-                        + courseCode + " course,  is " + studentAvarge + " ----\n");
-            Registration.continueOrNot(sections);
+            averageOfStudent(sections, courseCode);
         }
     }
 
+    /**
+     * search for section by courseCode and sectionNumber, if section found return
+     * section,else return null
+     */
     public static Section searchForSection(String courseCode, String sectionNumber, Set<Section> sections) {
+
+        Section section = new Section();
+        section.setCourseCode(courseCode);
+        section.setSectionNumber(sectionNumber);
+
         for (Section lookingForSection : sections) {
-            if (lookingForSection.getCourseCode().equals(courseCode)
-                    && lookingForSection.getSectionNumber().equals(sectionNumber)) {
+            if (lookingForSection.equals(section)) {
                 return lookingForSection;
             }
 
         }
 
-        System.out.println("---- Section not found, Please add new Section ----");
         return null;
+    }
+
+    /**
+     * add new section, check if setion aleardy exist or not, if not add seciton,
+     * else print error message
+     */
+    public static void addSection(Set<Section> sections, Section section) {
+        Section searchForSec = searchForSection(section.getCourseCode(), section.getSectionNumber(), sections);
+        if (searchForSec == null) {
+            sections.add(section);
+            System.out.println("\n---- Add new section ---- \n");
+        } else {
+            System.out.println("---- This section aleardy added ----");
+
+        }
+
     }
 
     @Override
@@ -205,8 +269,16 @@ public class Section extends Course implements Comparable<Section> {
         return "\n=================================\n" + super.toString() + "\t\t" + "Is Every Week: "
                 + this.isEveryWeek() + "\n" + "Section Number: " + this.getSectionNumber() + "\n" + "Branch: "
                 + this.getBranch() + "\n" + "-----------------------------\n" + "Instrctor: \n" + instrctor.toString()
-                + "\n-----------------------------\n" + "List of Students: \n\n" + this.getStudents()
+                + "\n-----------------------------\n" + "List of Students: \n\n" + students
                 + "\n=================================\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Section)
+            return ((Section) o).getCourseCode().equals(this.getCourseCode())
+                    && ((Section) o).getSectionNumber().equals(this.getSectionNumber());
+        return false;
     }
 
     @Override
