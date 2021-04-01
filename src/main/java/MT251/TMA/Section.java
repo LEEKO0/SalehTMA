@@ -2,7 +2,7 @@ package MT251.TMA;
 
 import java.util.*;
 
-public class Section extends Course implements Comparable<Section> {
+public class Section extends Course {
 
     private String sectionNumber;
     private Instrctor instrctor = new Instrctor();;
@@ -279,23 +279,6 @@ public class Section extends Course implements Comparable<Section> {
             return ((Section) o).getCourseCode().equals(this.getCourseCode())
                     && ((Section) o).getSectionNumber().equals(this.getSectionNumber());
         return false;
-    }
-
-    @Override
-    public int compareTo(Section o) {
-        int COURSE_COMAPARE = this.getCourseCode().compareTo(o.getCourseCode());
-        int SECTION_COMPARE = this.getSectionNumber().compareTo(o.getSectionNumber());
-        if (COURSE_COMAPARE == 0) {
-            if (SECTION_COMPARE > 0)
-                return 1;
-            else if (SECTION_COMPARE < 0)
-                return -1;
-            return 0;
-        } else if (COURSE_COMAPARE > 0)
-            return 1;
-        else if (COURSE_COMAPARE < 0)
-            return -1;
-        return 0;
     }
 
 }
