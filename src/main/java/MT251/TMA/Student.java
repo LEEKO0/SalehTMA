@@ -11,16 +11,17 @@ public class Student extends CollegePerson {
     private String program;
 
     public Student() {
-        this(null, true, 17, null);
+        this(null, true, 17, null, 4);
     }
 
-    public Student(String fullName, String programe) {
-        this(fullName, true, 17, programe);
+    public Student(String fullName, String program) {
+        this(fullName, true, 17, program, 4);
     }
 
-    public Student(String fullName, boolean isMale, int age, String programe) {
+    public Student(String fullName, boolean isMale, int age, String program, int totalCreditComplete) {
         super(fullName, isMale, age);
         this.setProgram(program);
+        this.setTotalCreditComplete(totalCreditComplete);
 
     }
 
@@ -148,13 +149,13 @@ public class Student extends CollegePerson {
                     student.setFullName(studentName);
                     student.setProgram(studentProgram);
                     student.insertCourse(courseCode, sectionNumber);
-                    student.setCurrentCreditHours(student.getCurrentCreditHours() + section.getCreditHours());
 
                     System.out.print("Age: ");
                     student.setAge(Registration.input.nextInt());
                     System.out.print("Gender M / F: ");
                     student.setIsMale(Registration.input.next().toUpperCase().equals("M"));
-
+                    System.out.print("Total Credit Hours Complete: ");
+                    student.setTotalCreditComplete(Registration.input.nextInt());
                     System.out.println("\n---- Add new Student in  " + student.getCourse(courseCode) + "- with id "
                             + student.getId() + " ----\n");
                     section.addNewStudent(student);
@@ -266,10 +267,9 @@ public class Student extends CollegePerson {
 
     @Override
     public String toString() {
-        return super.toString() + "\n" + "Program: " + this.getProgram() + "Sechdule: \n" + this.printSchedule()
-                + "\tTotal Completed Hours: " + this.getTotalCreditComplete() + "Current Credit Hours: "
-                + this.getCurrentCreditHours() + '\t' + "Remaining Credit Hours: " + this.getRemainingCreditHours()
-                + '\n';
+        return super.toString() + "Total Completed Hours: " + this.getTotalCreditComplete() + "\tCurrent Credit Hours: "
+                + this.getCurrentCreditHours() + "\t\tRemaining Credit Hours: " + this.getRemainingCreditHours() + '\n'
+                + "Program: " + this.getProgram() + "\nSechdule: \n" + this.printSchedule();
     }
 
     @Override

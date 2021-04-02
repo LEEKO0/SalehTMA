@@ -1,17 +1,18 @@
 package MT251.TMA;
 
-import java.util.*;
-
 public class Instrctor extends CollegePerson {
 
     private String biography;
+    private String academicDegree;
 
     public Instrctor() {
-        this(null, false, 25, null);
+        this(null, false, 25, null, "Bachelor");
     }
 
-    public Instrctor(String fullName, boolean isMale, int age, String biograhpy) {
+    public Instrctor(String fullName, boolean isMale, int age, String biography, String academicDegree) {
         super(fullName, isMale, age);
+        this.setBiography(biography);
+        this.setAcademicDegree(academicDegree);
     }
 
     /**
@@ -23,15 +24,30 @@ public class Instrctor extends CollegePerson {
 
     /**
      * 
-     * @param biography
+     * this method change value of biography
      */
     public void setBiography(String biography) {
         this.biography = biography;
     }
 
+    /**
+     * this method return value of academicDegree
+     */
+    public String getAcademicDegree() {
+        return academicDegree;
+    }
+
+    /**
+     * this method change value of academicDegree
+     */
+    public void setAcademicDegree(String academicDegree) {
+        this.academicDegree = academicDegree;
+    }
+
     @Override
     public String toString() {
-        return super.toString() + "Biography: " + this.getBiography();
+        return super.toString() + "Academic Degree: " + this.getAcademicDegree() + "\nBiography: "
+                + this.getBiography();
 
     }
 
@@ -72,6 +88,10 @@ public class Instrctor extends CollegePerson {
         String bString = Registration.input.nextLine().trim();
         bString = Registration.input.nextLine();
         instrctor.setBiography(bString);
+
+        System.out.print("Academic Degree: ");
+        String degree = Registration.input.nextLine().trim();
+        instrctor.setAcademicDegree(degree);
 
         System.out.print("Age: ");
         instrctor.setAge(Registration.input.nextInt());

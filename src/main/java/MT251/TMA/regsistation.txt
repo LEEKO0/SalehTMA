@@ -1,61 +1,376 @@
 
-=================================
-Coure Code: MT130		Credit Hours: 8		Is Every Week: true
+==================================================================
+Coure Code: M251		Credit Hours: 8		Is Every Week: true
+Section Number: 1303
+Branch: jeddah
+------------------------------------------------------------
+Instrctor: 
+Id: INST6566415	  Full Name: Malak Alameer	   Age: 30	        Gender: Female
+Academic Degree: PhD
+Biography: Mrs. Malak holds a Master of Science in Computer-Based Information System (CBIS) from University of Sunderland in 2008, Sunderland, UK and a B.Sc. degree in Computer Science from the University of King Abdul-Aziz University, Jeddah, Saudi Arabia, in 1991. 
+------------------------------------------------------------
+List of Students: 
+
+Id: STUD656644	  Full Name: Ali Ahmed	   Age: 18	        Gender: Male
+Total Completed Hours: 60	Current Credit Hours: 36		Remaining Credit Hours: 35
+Program: BU - Marketing
+Sechdule: 
+M251 ------- 1303
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1302
+
+Id: STUD656646	  Full Name: Rabba Ahmed 	   Age: 22	        Gender: Female
+Total Completed Hours: 13	Current Credit Hours: 12		Remaining Credit Hours: 106
+Program: IT - Network and Security
+Sechdule: 
+M251 ------- 1303
+MT103 ------- 1302
+
+Id: STUD656645	  Full Name: Dalal Ahmed 	   Age: 21	        Gender: Female
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computing
+Sechdule: 
+M251 ------- 1303
+MT103 ------- 1302
+
+Id: STUD656648	  Full Name: Abdorhman Saleh	   Age: 20	        Gender: Male
+Total Completed Hours: 29	Current Credit Hours: 24		Remaining Credit Hours: 78
+Program: IT - Network and Security
+Sechdule: 
+M251 ------- 1303
+MT131 ------- 1301
+MT103 ------- 1302
+
+Id: STUD656647	  Full Name: Ahlam Saleh	   Age: 20	        Gender: Female
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computing
+Sechdule: 
+M251 ------- 1303
+MT103 ------- 1302
+
+==================================================================
+
+
+==================================================================
+Coure Code: MT112		Credit Hours: 8		Is Every Week: true
 Section Number: 1301
-Branch: jedda
------------------------------
+Branch: jeddah7
+------------------------------------------------------------
 Instrctor: 
-Id: INST10578		Full Name: null	Age: 25		Gender: Female
-Biography: null
------------------------------
+Id: INST6566415	  Full Name: Malak Alameer	   Age: 30	        Gender: Female
+Academic Degree: PhD
+Biography: Mrs. Malak holds a Master of Science in Computer-Based Information System (CBIS) from University of Sunderland in 2008, Sunderland, UK and a B.Sc. degree in Computer Science from the University of King Abdul-Aziz University, Jeddah, Saudi Arabia, in 1991. 
+------------------------------------------------------------
 List of Students: 
 
-1-  id: STUD15327 	 Name: null 	 Program: null
+Id: STUD656642	  Full Name: Ammar Saleh	   Age: 27	        Gender: Male
+Total Completed Hours: 25	Current Credit Hours: 24		Remaining Credit Hours: 82
+Program: BU - Accounting
+Sechdule: 
+M251 ------- 1302
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1301
 
-=================================
+Id: STUD656644	  Full Name: Ali Ahmed	   Age: 18	        Gender: Male
+Total Completed Hours: 60	Current Credit Hours: 36		Remaining Credit Hours: 35
+Program: BU - Marketing
+Sechdule: 
+M251 ------- 1303
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1302
+
+Id: STUD656643	  Full Name: Ahmed Ali	   Age: 26	        Gender: Male
+Total Completed Hours: 30	Current Credit Hours: 24		Remaining Credit Hours: 77
+Program: IT - Computing with Business
+Sechdule: 
+M251 ------- 1302
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1301
+
+==================================================================
 
 
-=================================
-Coure Code: MT130		Credit Hours: 8		Is Every Week: true
+==================================================================
+Coure Code: MT103		Credit Hours: 4		Is Every Week: false
 Section Number: 1302
-Branch: jedda
------------------------------
+Branch: jeddah
+------------------------------------------------------------
 Instrctor: 
-Id: INST10578		Full Name: null	Age: 25		Gender: Female
-Biography: null
------------------------------
+Id: INST6566414	  Full Name: Ahmed Rakha	   Age: 45	        Gender: Male
+Academic Degree: PhD
+Biography: Born in Egypt in 1976, BSc, MSc and PhD in Computer Engineering. Assistant Professor at the Department of Systems and Computers Engineering at Al-Azhar University in Cairo, Egypt since 2014. Currently Assistant Professor at Information Technology and Computing College at Arab Open University  KSA. Major specialization in Artificial Intelligence, Machine Learning, Data Engineering and Data Science.
+------------------------------------------------------------
 List of Students: 
 
+Id: STUD656644	  Full Name: Ali Ahmed	   Age: 18	        Gender: Male
+Total Completed Hours: 60	Current Credit Hours: 36		Remaining Credit Hours: 35
+Program: BU - Marketing
+Sechdule: 
+M251 ------- 1303
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1302
 
-=================================
+Id: STUD656646	  Full Name: Rabba Ahmed 	   Age: 22	        Gender: Female
+Total Completed Hours: 13	Current Credit Hours: 12		Remaining Credit Hours: 106
+Program: IT - Network and Security
+Sechdule: 
+M251 ------- 1303
+MT103 ------- 1302
+
+Id: STUD656645	  Full Name: Dalal Ahmed 	   Age: 21	        Gender: Female
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computing
+Sechdule: 
+M251 ------- 1303
+MT103 ------- 1302
+
+Id: STUD656648	  Full Name: Abdorhman Saleh	   Age: 20	        Gender: Male
+Total Completed Hours: 29	Current Credit Hours: 24		Remaining Credit Hours: 78
+Program: IT - Network and Security
+Sechdule: 
+M251 ------- 1303
+MT131 ------- 1301
+MT103 ------- 1302
+
+Id: STUD656647	  Full Name: Ahlam Saleh	   Age: 20	        Gender: Female
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computing
+Sechdule: 
+M251 ------- 1303
+MT103 ------- 1302
+
+==================================================================
 
 
-=================================
-Coure Code: MT130		Credit Hours: 8		Is Every Week: true
-Section Number: 1304
-Branch: jedda
------------------------------
+==================================================================
+Coure Code: M251		Credit Hours: 8		Is Every Week: true
+Section Number: 1301
+Branch: jeddah
+------------------------------------------------------------
 Instrctor: 
-Id: INST10578		Full Name: null	Age: 25		Gender: Female
-Biography: null
------------------------------
+Id: INST6566415	  Full Name: Malak Alameer	   Age: 30	        Gender: Female
+Academic Degree: PhD
+Biography: Mrs. Malak holds a Master of Science in Computer-Based Information System (CBIS) from University of Sunderland in 2008, Sunderland, UK and a B.Sc. degree in Computer Science from the University of King Abdul-Aziz University, Jeddah, Saudi Arabia, in 1991. 
+------------------------------------------------------------
 List of Students: 
 
+Id: STUD656648	  Full Name: Abdorhman Saleh	   Age: 20	        Gender: Male
+Total Completed Hours: 29	Current Credit Hours: 24		Remaining Credit Hours: 78
+Program: IT - Network and Security
+Sechdule: 
+M251 ------- 1303
+MT131 ------- 1301
+MT103 ------- 1302
 
-=================================
+Id: STUD656649	  Full Name: Omar Abdorhman	   Age: 20	        Gender: Male
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Network and Security
+Sechdule: 
+M251 ------- 1301
+MT131 ------- 1301
+
+Id: STUD6566412	  Full Name: ELtaybe Karrar	   Age: 23	        Gender: Male
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computer Science
+Sechdule: 
+M251 ------- 1301
+MT131 ------- 1301
+
+Id: STUD6566411	  Full Name: Nora Ahmed	   Age: 20	        Gender: Female
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computer Science
+Sechdule: 
+M251 ------- 1301
+MT131 ------- 1301
+
+Id: STUD6566410	  Full Name: Asmaa Ahmed	   Age: 27	        Gender: Female
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computing with Business
+Sechdule: 
+M251 ------- 1301
+MT131 ------- 1301
+
+==================================================================
 
 
-=================================
-Coure Code: MT130		Credit Hours: 8		Is Every Week: true
-Section Number: 1307
-Branch: jedda
------------------------------
+==================================================================
+Coure Code: MT131		Credit Hours: 4		Is Every Week: false
+Section Number: 1303
+Branch: jeddah
+------------------------------------------------------------
 Instrctor: 
-Id: INST10578		Full Name: null	Age: 25		Gender: Female
-Biography: null
------------------------------
+Id: INST6566416	  Full Name: Suha Alsheikh	   Age: 22	        Gender: Female
+Academic Degree: PhD
+Biography: Dr.Suha AlShaikh received her PHD form King Saud University in Riyadh in December 2011. Throughout her Master study in King Saud University she served as a tutor for the tutorial classes in the department of Mathematics and the department of Statistic. Also throughout her PHD study she worked as a part time lecturer in Dammam University , and Arab Open University (for five years). Right after she got her PHD, she received an offer for a full time position as an Assistant Professor in the department of information technology and computing in Arab Open University. In her current position she is the head of  ITC department in Dammam and Ahsa branches, a quality coordinator in Dammam branch and she also a coordinator of some of the FCS courses on the level of Saudi Arabia.    
+------------------------------------------------------------
 List of Students: 
 
+Id: STUD656642	  Full Name: Ammar Saleh	   Age: 27	        Gender: Male
+Total Completed Hours: 25	Current Credit Hours: 24		Remaining Credit Hours: 82
+Program: BU - Accounting
+Sechdule: 
+M251 ------- 1302
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1301
 
-=================================
+Id: STUD656644	  Full Name: Ali Ahmed	   Age: 18	        Gender: Male
+Total Completed Hours: 60	Current Credit Hours: 36		Remaining Credit Hours: 35
+Program: BU - Marketing
+Sechdule: 
+M251 ------- 1303
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1302
+
+Id: STUD656643	  Full Name: Ahmed Ali	   Age: 26	        Gender: Male
+Total Completed Hours: 30	Current Credit Hours: 24		Remaining Credit Hours: 77
+Program: IT - Computing with Business
+Sechdule: 
+M251 ------- 1302
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1301
+
+==================================================================
+
+
+==================================================================
+Coure Code: MT103		Credit Hours: 4		Is Every Week: false
+Section Number: 1301
+Branch: jeddah
+------------------------------------------------------------
+Instrctor: 
+Id: INST6566414	  Full Name: Ahmed Rakha	   Age: 45	        Gender: Male
+Academic Degree: PhD
+Biography: Born in Egypt in 1976, BSc, MSc and PhD in Computer Engineering. Assistant Professor at the Department of Systems and Computers Engineering at Al-Azhar University in Cairo, Egypt since 2014. Currently Assistant Professor at Information Technology and Computing College at Arab Open University  KSA. Major specialization in Artificial Intelligence, Machine Learning, Data Engineering and Data Science.
+------------------------------------------------------------
+List of Students: 
+
+Id: STUD656642	  Full Name: Ammar Saleh	   Age: 27	        Gender: Male
+Total Completed Hours: 25	Current Credit Hours: 24		Remaining Credit Hours: 82
+Program: BU - Accounting
+Sechdule: 
+M251 ------- 1302
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1301
+
+Id: STUD656644	  Full Name: Ali Ahmed	   Age: 18	        Gender: Male
+Total Completed Hours: 60	Current Credit Hours: 36		Remaining Credit Hours: 35
+Program: BU - Marketing
+Sechdule: 
+M251 ------- 1303
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1302
+
+Id: STUD656643	  Full Name: Ahmed Ali	   Age: 26	        Gender: Male
+Total Completed Hours: 30	Current Credit Hours: 24		Remaining Credit Hours: 77
+Program: IT - Computing with Business
+Sechdule: 
+M251 ------- 1302
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1301
+
+==================================================================
+
+
+==================================================================
+Coure Code: MT131		Credit Hours: 4		Is Every Week: false
+Section Number: 1301
+Branch: jeddah
+------------------------------------------------------------
+Instrctor: 
+Id: INST6566416	  Full Name: Suha Alsheikh	   Age: 22	        Gender: Female
+Academic Degree: PhD
+Biography: Dr.Suha AlShaikh received her PHD form King Saud University in Riyadh in December 2011. Throughout her Master study in King Saud University she served as a tutor for the tutorial classes in the department of Mathematics and the department of Statistic. Also throughout her PHD study she worked as a part time lecturer in Dammam University , and Arab Open University (for five years). Right after she got her PHD, she received an offer for a full time position as an Assistant Professor in the department of information technology and computing in Arab Open University. In her current position she is the head of  ITC department in Dammam and Ahsa branches, a quality coordinator in Dammam branch and she also a coordinator of some of the FCS courses on the level of Saudi Arabia.    
+------------------------------------------------------------
+List of Students: 
+
+Id: STUD656648	  Full Name: Abdorhman Saleh	   Age: 20	        Gender: Male
+Total Completed Hours: 29	Current Credit Hours: 24		Remaining Credit Hours: 78
+Program: IT - Network and Security
+Sechdule: 
+M251 ------- 1303
+MT131 ------- 1301
+MT103 ------- 1302
+
+Id: STUD656649	  Full Name: Omar Abdorhman	   Age: 20	        Gender: Male
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Network and Security
+Sechdule: 
+M251 ------- 1301
+MT131 ------- 1301
+
+Id: STUD6566412	  Full Name: ELtaybe Karrar	   Age: 23	        Gender: Male
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computer Science
+Sechdule: 
+M251 ------- 1301
+MT131 ------- 1301
+
+Id: STUD6566411	  Full Name: Nora Ahmed	   Age: 20	        Gender: Female
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computer Science
+Sechdule: 
+M251 ------- 1301
+MT131 ------- 1301
+
+Id: STUD6566410	  Full Name: Asmaa Ahmed	   Age: 27	        Gender: Female
+Total Completed Hours: 29	Current Credit Hours: 12		Remaining Credit Hours: 90
+Program: IT - Computing with Business
+Sechdule: 
+M251 ------- 1301
+MT131 ------- 1301
+
+==================================================================
+
+
+==================================================================
+Coure Code: M251		Credit Hours: 8		Is Every Week: true
+Section Number: 1302
+Branch: jeddah
+------------------------------------------------------------
+Instrctor: 
+Id: INST6566415	  Full Name: Malak Alameer	   Age: 30	        Gender: Female
+Academic Degree: PhD
+Biography: Mrs. Malak holds a Master of Science in Computer-Based Information System (CBIS) from University of Sunderland in 2008, Sunderland, UK and a B.Sc. degree in Computer Science from the University of King Abdul-Aziz University, Jeddah, Saudi Arabia, in 1991. 
+------------------------------------------------------------
+List of Students: 
+
+Id: STUD656642	  Full Name: Ammar Saleh	   Age: 27	        Gender: Male
+Total Completed Hours: 25	Current Credit Hours: 24		Remaining Credit Hours: 82
+Program: BU - Accounting
+Sechdule: 
+M251 ------- 1302
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1301
+
+Id: STUD656644	  Full Name: Ali Ahmed	   Age: 18	        Gender: Male
+Total Completed Hours: 60	Current Credit Hours: 36		Remaining Credit Hours: 35
+Program: BU - Marketing
+Sechdule: 
+M251 ------- 1303
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1302
+
+Id: STUD656643	  Full Name: Ahmed Ali	   Age: 26	        Gender: Male
+Total Completed Hours: 30	Current Credit Hours: 24		Remaining Credit Hours: 77
+Program: IT - Computing with Business
+Sechdule: 
+M251 ------- 1302
+MT112 ------- 1301
+MT131 ------- 1303
+MT103 ------- 1301
+
+==================================================================
 

@@ -10,6 +10,7 @@ public abstract class CollegePerson extends Object {
     private String fullName;
     private int age;
     private boolean isMale;
+    private static int numberOfObj;
 
     public CollegePerson() {
         this(null, false, 18);
@@ -19,10 +20,12 @@ public abstract class CollegePerson extends Object {
         this.setFullName(fullName);
         this.setAge(age);
         this.isMale = isMale;
+
         if (this instanceof Instrctor)
-            this.id = "INST" + gen();
+            this.id = "INST" + gen() + (++numberOfObj);
         if (this instanceof Student)
-            this.id = "STUD" + gen();
+            this.setId("STUD" + gen() + (++numberOfObj));
+
     }
 
     /**
@@ -71,13 +74,13 @@ public abstract class CollegePerson extends Object {
      */
     public static int gen() {
         Random r = new Random(System.currentTimeMillis());
-        return 10000 + r.nextInt(20000);
+        return 10000 + r.nextInt(90000);
     }
 
     @Override
     public String toString() {
-        return "Id: " + this.getId() + "\t\t" + "Full Name: " + this.getFullName() + "\t" + "Age: " + this.getAge()
-                + "\t\t" + "Gender: " + (this.getIsMale() ? "Male" : "Female") + "\n";
+        return "Id: " + this.getId() + "\t" + "  Full Name: " + this.getFullName() + "\t" + "   Age: " + this.getAge()
+                + "\t" + "        Gender: " + (this.getIsMale() ? "Male" : "Female") + "\n";
     }
 
     @Override

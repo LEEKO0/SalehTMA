@@ -17,9 +17,11 @@ public class Section extends Course {
 
     public Section(String courseCode, int creditHours, String sectionNumber, String branch, boolean isEveryWeek,
             Instrctor instrctor) {
+        this.branch = branch;
         super.setCourseCode(courseCode);
         super.setCreditHours(creditHours);
         this.setSectionNumber(sectionNumber);
+        this.setInstrctor(instrctor);
         this.setBranch(branch);
         this.SetIsEveryWeek(isEveryWeek);
 
@@ -41,8 +43,12 @@ public class Section extends Course {
         this.isEveryWeek = isEveryWeek;
     }
 
-    public void setEveryWeek(boolean isEveryWeek) {
-        this.isEveryWeek = isEveryWeek;
+    public String getInstrctor() {
+        return instrctor.toString();
+    }
+
+    public void setInstrctor(Instrctor instrctor) {
+        this.instrctor = instrctor;
     }
 
     public String getBranch() {
@@ -146,7 +152,12 @@ public class Section extends Course {
             System.out.println("\n---- The student is aleady added ----\n");
         } else if (this.students.size() <= MAXIUMUM_NUMBER) {
             System.out.println("\n----The student is added ----\n");
+
+            student.insertCourse(this.getCourseCode(), this.getSectionNumber());
+            student.setCurrentCreditHours(this.getCreditHours() + student.getCurrentCreditHours());
             this.students.put(student.getId(), student);
+            System.out.println(student);
+
         } else
             System.out.println("\n----This section is filled----\n");
     }
@@ -156,19 +167,14 @@ public class Section extends Course {
      * if not found print error message, else remove student
      */
     public void removeStudent(Student student) {
+
         if (this.students.containsKey(student.getId())) {
-            System.out.println("\n---- the student with id " + student.getId() + " is removed.----\n");
+            // System.out.println("\n---- The Student with id " + student.getId() + " is
+            // removed.----\n");
+            System.out.println(student);
             this.students.remove(student.getId());
         } else
-            System.out.println("\n---- Student not found ----\n");
-    }
-
-    public String getInstrctor() {
-        return instrctor.toString();
-    }
-
-    public void setInstrctor(Instrctor instrctor) {
-        this.instrctor = instrctor;
+            System.out.println("\n---- Removed faild, Student not found ----\n");
     }
 
     /**
@@ -184,21 +190,22 @@ public class Section extends Course {
         if (sections.size() == 0) {
             System.out.println("\n---- The no any section yet, Please add new Section than add Student ----\n");
         } else {
-
             double totalStudent = 0.0;
             double numberSections = 0.0;
             for (Section section : sections) {
+
                 if (section.getCourseCode().equals(courseCode)) {
                     totalStudent += section.getStudents().size();
                     numberSections++;
                 }
             }
+
             if (totalStudent == 0.0 || numberSections == 0.0) {
                 System.out.println("\n---- We don't found any students in " + courseCode + " ----\n");
             } else {
-                double studentAvarge = 0.0;
+                double studentAvarge = totalStudent / numberSections;
                 System.out.println(
-                        "\n---- The avarge of student in  course" + courseCode + ",  is " + studentAvarge + " ----\n");
+                        "\n---- The avarge of student in  course " + courseCode + ", is " + studentAvarge + " ----\n");
             }
 
         }
@@ -263,14 +270,22 @@ public class Section extends Course {
 
     }
 
+    public String studentsData() {
+        String studentAll = "";
+        for (Student s : students.values())
+            studentAll += "\n" + s;
+        return studentAll;
+    }
+
     @Override
     public String toString() {
-
-        return "\n=================================\n" + super.toString() + "\t\t" + "Is Every Week: "
-                + this.isEveryWeek() + "\n" + "Section Number: " + this.getSectionNumber() + "\n" + "Branch: "
-                + this.getBranch() + "\n" + "-----------------------------\n" + "Instrctor: \n" + instrctor.toString()
-                + "\n-----------------------------\n" + "List of Students: \n\n" + students
-                + "\n=================================\n";
+        return "\n==================================================================\n" + super.toString() + "\t\t"
+                + "Is Every Week: " + this.isEveryWeek() + "\n" + "Section Number: " + this.getSectionNumber() + "\n"
+                + "Branch: " + this.getBranch() + "\n"
+                + "------------------------------------------------------------\n" + "Instrctor: \n"
+                + instrctor.toString() + "\n------------------------------------------------------------\n"
+                + "List of Students: \n" + studentsData()
+                + "\n==================================================================\n";
     }
 
     @Override
